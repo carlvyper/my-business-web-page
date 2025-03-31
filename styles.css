@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+header {
+    background: #1a237e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold */
+    transform: scale(1.2);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700; /* Gold underline */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Sections */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Centering and responsiveness */
+    max-width: 1100px;
+    text-align: center;
+    display: none; /* Hide all sections by default */
+}
+
+/* Show the section that is targeted */
+section:target {
+    display: block; /* Display the section when it is targeted */
+}
+
+/* Header and section text color */
+h1, h2 {
+    color: #1a237e;
+}
+
+/* Testimonial section */
+.testimonial {
+    background: #ff6f00;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonial p {
+    font-size: 18px;
+}
+
+.testimonial strong {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Contact Us Section */
+.contact-container {
+    text-align: center;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1100px;
+}
+
+.contact-container h2 {
+    color: #1a237e;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact-container input, .contact-container textarea {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-container button {
+    background: #ff6f00;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.contact-container button:hover {
+    background: #e65100; /* Darker Orange */
+}
+
+/* Footer */
+footer {
+    background: #1a237e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position:relative;
+    bottom:auto;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contact-container form {
+        width: 80%;
+    }
+
+    .testimonial {
+        width: 90%;
+    }
+}
